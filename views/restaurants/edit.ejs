@@ -1,0 +1,73 @@
+<% layout('layouts/boilerplate') %>
+   
+
+
+
+
+
+           <div class="row">
+            <h1 class="text-center">Edit Picnic Spot</h1>
+               <div class="col-6 offset-3 mb-5">
+                <form action="/restaurants/<%=restaurant._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                       <div class="mb-3">
+                           <label class="form-label" for="title">Title</label>
+                           <input class="form-control" type="text" name="restaurant[title]" id="title"
+                            value="<%= restaurant.title %>" required>   
+                       </div>
+
+                       <div class="mb-3">
+                            <label class="form-label" for="location">Location</label>
+                            <input class="form-control" type="text" name="restaurant[location]" id="location"
+                            value="<%= restaurant.location %>" required>  
+                       </div>
+                          
+                       <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupFile01">Add Images</label>
+                        <input type="file" class="form-control" id="inputGroupFile01" name="image" multiple required>
+                      </div>
+                       
+                       <div class="mb-3">
+                           <label class="form-label" for="price">Avg Budget</label>
+                            <div class="input-group ">
+                                     <span class="input-group-text" id="price-label">$</span>
+                                     <input type="text" class="form-control" id="price" name="restaurant[price]"
+                                     aria-label="price" aria-describedby="price-label" value="<%= restaurant.price %>" required>
+                                    
+                            </div>
+                       </div>
+                       <div class="mb-3">
+                           <label class="form-label" for="description">Description</label>
+                           <textarea class="form-control" type="description" name="restaurant[description]" id="description" required><%= restaurant.description %></textarea> 
+                       </div>
+                        
+                     <button class="btn  mt-3 mb-3" style="color:black">Update The Place</button>
+                   </form> 
+              
+               </div>
+        </div>
+
+
+
+
+    <style>
+      body{
+        background-color: rgb(236, 250, 237);
+        background-image: url('/../../public/edit-bg.jpg') ;
+      }
+      .col-6{
+        background-color: rgb(102, 102, 102);
+        padding: 20px;
+        border-radius: 10px;
+        color: rgb(226, 228, 255);
+      }
+      .text-center{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .btn{
+        background-color: chocolate;
+      }
+      .btn:hover{
+            background-color: whitesmoke;
+      }
+      
+    </style>

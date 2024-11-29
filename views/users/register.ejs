@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate') %>
+
+
+
+<div class="container " >
+       <div class="row">
+             <div class="col-md-6 offset-md-3">
+                     <div class="card shadow" style="background-color: rgb(164, 168, 167);">
+                             <div class="card-title mx-auto">
+                                  <h1>Register</h1>   
+                             </div>
+                             
+                         <div class="card-body" >
+                            <form action="/register" method="POST" class="validated-form" novalidate>
+                                   <div class="mb-3">
+                                           <label class="form-label" for="username" >Username</label>
+                                           <input class="form-control" type="text" name="username" id="username" required>
+                                   </div>
+                                   <div class="mb-3">
+                                          <label class="form-label"  for="email">Email</label>
+                                          <input class="form-control" type="email" name="email" id="email" required>
+                                   </div>
+                                   <div class="mb-3">
+                                     <label class="form-label"  for="password">Password</label>
+                                     <input class="form-control" type="password" name="password" id="password" required>
+                              </div>
+                              <div class="d-grid gap-2 col-15 mx-auto">
+                                   <button class="btn btn-success" >Register</button>
+                                   
+                              </div>
+                         </form>
+                         </div>
+                     </div>
+             </div>  
+       </div>
+</div>
+
+
+
+
+
+

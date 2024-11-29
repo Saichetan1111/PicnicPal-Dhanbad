@@ -1,0 +1,21 @@
+body{
+    background-image: url('../Maithon.jpg');
+   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.text-content{
+         margin-top: 140px;
+         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+.text-heading{
+    color:blueviolet;
+    margin-left: -100px;
+}
+
+
